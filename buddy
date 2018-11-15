@@ -1,0 +1,197 @@
+#!/usr/bin/python
+#Budget income/expenses program
+#Written by David Lawson - 2016
+
+import os
+os.system('clear')
+import time
+import datetime
+x = datetime.datetime.now()
+
+print
+print "##############################################"
+print "#   Program calculates income and expenses   #"
+print "#   on a monthly basis. Prints results to    #"
+print "#   screen w/option to save to text file.    #"
+print "#   Saved file location: bin/python/files    #"
+print "##############################################"
+print
+time.sleep (0.5)
+
+raw_input("Press [Enter] to continue... ")
+os.system('clear')
+print
+
+class color:
+   BOLD = '\033[1m'
+   END = '\033[0m'
+print color.BOLD + "MONTHLY INCOME AND EXPENSES\n" + color.END
+print
+time.sleep (0.8)
+
+name = raw_input("Name: " )
+print
+time.sleep (0.5)
+
+month = raw_input("Month: " )
+print
+time.sleep (0.5)
+
+#gather info
+print
+time.sleep (1)
+print "-ANSWERS MUST BE IN DOLLAR AMOUNTS-"
+time.sleep (1.5)
+print
+print
+
+income = raw_input("What is your monthly income? $" )
+income = int(income)
+print
+time.sleep (0.5)
+
+rent = raw_input("How much is your rent? $" )
+rent = int(rent)
+print
+time.sleep (0.5)
+
+cons = raw_input("How much for consumers? $" )
+cons = int(cons)
+print
+time.sleep (0.5)
+
+cable = raw_input("How much for cable? (tv/internet): $" )
+cable = int(cable)
+print
+time.sleep (0.5)
+
+car = raw_input("How much for car insurance? $" )
+car = int(car)
+print
+time.sleep (0.5)
+
+food = raw_input("How much for food/groceries? $" )
+food = int(food)
+print
+time.sleep (0.5)
+
+gas = raw_input("How much for gas? $" )
+gas = int(gas)
+print
+time.sleep (0.5)
+
+person = raw_input("Personal items, clothes, etc: $" )
+person = int(person)
+print
+time.sleep (0.5)
+
+other = raw_input("Other expenses? $" )
+other = int(other)
+print
+time.sleep (0.5)
+
+cell = raw_input("Cell phone bill? $" )
+cell = int(cell)
+print
+time.sleep (1)
+
+print
+#processing delay
+import sys, time
+string = 'Processing...\n'
+for char in string:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(.08)
+
+
+#print to screen
+os.system('clear')
+print
+print " --YOUR INFO-- \n"
+time.sleep (1)
+
+print name, " | ", month, (x.strftime("%Y")) #year
+
+print
+print ('Monthly Income:    $'+str(income))
+print
+print "  Monthly Costs\n",
+print
+print ('  Rent:            $'+str(rent))
+print ('  Consumers:       $'+str(cons))
+print ('  Cable:           $'+str(cable))
+print ('  Car Ins:         $'+str(car))
+print ('  Food:            $'+str(food))
+print ('  Gas:             $'+str(gas))
+print ('  Personal:        $'+str(person))
+print ('  Other:           $'+str(other))
+print ('  Phone:           $'+str(cell))
+print
+time.sleep (1)
+
+total = rent + cons + cable + car + food + gas + person + other + cell
+print ('    Total Costs:   $'+str(total))
+print
+time.sleep (1)
+
+remain = income - total
+print ('    Remaining:     $'+str(remain))
+print
+time.sleep (1)
+
+
+#two more questions
+print "\n"
+sav = raw_input("How much into savings account? $" )
+sav = int(sav)
+
+print
+left = remain - sav
+print ('    Whats Left:    $'+str(left))
+time.sleep (1)
+
+print "\n"
+earn = raw_input("Additional earned income? $" )
+earn = int(earn)
+
+print
+newt = remain - sav + earn
+print ('    New Total:     $'+str(newt))
+
+
+#Save file as
+print "\n"
+saveas = raw_input('Save File as: ')
+print
+
+#save to text file (w=writeOver, a=append)
+#save to: files/filename
+saveFile = open(saveas, 'w')
+
+#write to text file
+saveFile.write( str( ' --YOUR INFO--' ) + "\n\n" )
+saveFile.write( str(name + ' | ' + str(month) + ' 2018' "\n\n" ))
+
+saveFile.write( 'Monthly Income:    $' + str(income) + "\n\n" )
+saveFile.write( '  Monthly Costs     ' + str() + "\n\n" )
+saveFile.write( '  Rent:            $' + str(rent) + "\n" )
+saveFile.write( '  Consumers:       $' + str(cons) + "\n" )
+saveFile.write( '  Cable:           $' + str(cable) + "\n" )
+saveFile.write( '  Car Ins:         $' + str(car) + "\n" )
+saveFile.write( '  Food:            $' + str(food) + "\n" )
+saveFile.write( '  Gas:             $' + str(gas) + "\n" )
+saveFile.write( '  Personal:        $' + str(person) + "\n" )
+saveFile.write( '  Other:           $' + str(other) + "\n" )
+saveFile.write( '  Phone:           $' + str(cell) + "\n\n" )
+saveFile.write( '    Total Costs:   $' + str(total) + "\n\n" )
+saveFile.write( '    Remaining:     $' + str(remain) + "\n\n\n\n" )
+
+saveFile.write( ' How much into savings account? $' + str(sav) + "\n\n" )
+saveFile.write( '    Whats Left:    $' + str(left) + "\n\n\n" )
+saveFile.write( ' Additional earned income? $' + str(earn) + "\n\n" )
+saveFile.write( '    New Total:     $' + str(newt) + "\n\n" )
+
+saveFile.close()
+
+print "\n"
