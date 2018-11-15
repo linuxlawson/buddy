@@ -171,7 +171,7 @@ saveFile = open(saveas, 'w')
 
 #write to text file
 saveFile.write( str( ' --YOUR INFO--' ) + "\n\n" )
-saveFile.write( str(name + ' | ' + str(month) + ' 2018' "\n\n" ))
+saveFile.write( str(name + ' | ' + str(month) + (x.strftime(" %Y")) + "\n\n" ))
 
 saveFile.write( 'Monthly Income:    $' + str(income) + "\n\n" )
 saveFile.write( '  Monthly Costs     ' + str() + "\n\n" )
