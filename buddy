@@ -10,12 +10,11 @@ import datetime
 x = datetime.datetime.now()
 
 print
-print "##########################################"
-print "#   Calculates income and expenses       #"
-print "#   on a monthly basis. Prints results   #"
-print "#   to screen and saves to text file.    #"
-print "#   Saved file loc: bin/python/files     #"
-print "##########################################"
+print "##############################################"
+print "#  Program calculates income and expenses    #"
+print "#  on a monthly basis. Prints results        #"
+print "#  to screen w/option to save as text file.  #"
+print "##############################################"
 print
 time.sleep (0.5)
 
@@ -26,8 +25,7 @@ print
 class color:
    BOLD = '\033[1m'
    END = '\033[0m'
-print color.BOLD + "MONTHLY INCOME AND EXPENSES\n" + color.END
-print
+print color.BOLD + "MONTHLY INCOME AND EXPENSES\n\n" + color.END
 time.sleep (0.5)
 
 name = raw_input("Name: " )
@@ -41,9 +39,8 @@ time.sleep (0.5)
 #gather info
 print
 time.sleep (1)
-print color.BOLD + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + color.END
+print color.BOLD + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + color.END + "\n\n"
 time.sleep (1)
-print "\n"
 
 
 income = raw_input("What is your monthly income? $" )
@@ -93,10 +90,10 @@ time.sleep (0.5)
 
 cell = raw_input("Cell phone bill? $" )
 cell = int(cell)
-print
+print "\n"
 time.sleep (1)
 
-print
+
 #processing delay
 import sys, time
 string = 'Processing...\n'
@@ -138,13 +135,11 @@ h = other
 i = cell
 
 total = a + b + c + d + e + f + g + h + i
-print ('    Total Costs:    $'+str(total))
-print
+print ('    Total Costs:    $'+str(total)) + "\n"
 time.sleep (1)
 
 remain = income - total
-print ('    Remaining:      $'+str(remain))
-print
+print ('    Remaining:      $'+str(remain)) + "\n"
 time.sleep (1)
 
 
