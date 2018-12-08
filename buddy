@@ -8,6 +8,7 @@ os.system('clear')
 import time
 import datetime
 x = datetime.datetime.now()
+import sys
 
 print
 print "##############################################"
@@ -25,6 +26,10 @@ print
 class color:
    BOLD = '\033[1m'
    END = '\033[0m'
+   RED = '\033[91m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+
 print color.BOLD + "MONTHLY INCOME AND EXPENSES\n\n" + color.END
 time.sleep (0.5)
 
@@ -38,7 +43,7 @@ time.sleep (0.5)
 
 #gather info
 print
-time.sleep (1)
+time.sleep (0.5)
 print color.BOLD + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + color.END + "\n\n"
 time.sleep (1)
 
