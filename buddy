@@ -140,11 +140,11 @@ h = other
 i = cell
 
 total = a + b + c + d + e + f + g + h + i
-print ('    Total Costs:    $'+str(total)) + "\n"
+print color.BOLD + ('    Total Costs:    $'+str(total)) + "\n" + color.END
 time.sleep (1)
 
 remain = income - total
-print ('    Remaining:      $'+str(remain)) + "\n"
+print color.BOLD + ('    Remaining:      $'+str(remain)) + "\n" + color.END
 time.sleep (1)
 
 
@@ -155,7 +155,7 @@ sav = int(sav)
 
 print
 left = remain - sav
-print ('    Whats Left:     $'+str(left))
+print color.BOLD + ('    Whats Left:     $'+str(left)) + color.END
 time.sleep (1)
 
 print "\n"
@@ -164,7 +164,7 @@ earn = int(earn)
 
 print
 newt = remain - sav + earn
-print ('    New Total:      $'+str(newt))
+print color.BOLD + ('    New Total:      $'+str(newt)) + color.END
 
 
 #Save file as
