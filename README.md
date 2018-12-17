@@ -6,7 +6,8 @@ Prints results to screen and saves to text file.
 A 'files' folder can be created in order to save files to.  
 (i.e. - Save as: files/filename)  
 
-Or
+Or  
+
 Save as: files/jan  
 Save as: files/feb
 
