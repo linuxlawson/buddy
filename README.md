@@ -7,8 +7,7 @@ A 'files' folder can be created in order to save files to.
 
 --  
 
-Save as: files/jan  
-Save as: files/feb  
+  
 
 Whole numbers only, doesn't do decimals.  
 
