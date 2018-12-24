@@ -9,5 +9,8 @@ A 'files' folder can be created in order to save files to.
 --  
 
 Save as: files/jan  
-Save as: files/feb
+Save as: files/feb  
+
+Whole numbers only, wont do decimals (yet).  
+Just round off to nearest dollar.     
 
