@@ -9,6 +9,8 @@ A 'files' folder can be created in order to save files to.
 
 Whole numbers only, didn't bother with decimals.  
 
+Can be edited and adjusted accordingly.
+
   
   
   
