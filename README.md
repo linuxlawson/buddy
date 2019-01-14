@@ -7,7 +7,11 @@ A 'files' folder can be created in order to save files to.
 
   
 
-Whole numbers only, doesn't do decimals.  
+Whole numbers only, didn't bother with decimals.  
+
+  
+  
+  
 
 
   
