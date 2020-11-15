@@ -1,7 +1,7 @@
 # buddy  
 
 
-cli program
+CLI program
 
 
 
