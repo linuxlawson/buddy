@@ -1,4 +1,9 @@
-# buddy (cli)
+# buddy  
+
+
+cli program
+
+
 
 Calculates income and expenses on a monthly basis.  
 Prints results to screen and saves to text file.  
