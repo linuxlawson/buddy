@@ -1,7 +1,7 @@
 # buddy  
 
 
-CLI program
+CLI Budget Program
 
 
 
