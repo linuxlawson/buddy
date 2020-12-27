@@ -14,7 +14,7 @@ A 'files' folder can be created in order to save files to.
 
   
 
-Whole numbers only, didn't bother with decimals.  
+Note: Use whole numbers only, wont do decimals at this time.  
 
 Can be edited and adjusted accordingly.
 
