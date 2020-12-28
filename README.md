@@ -12,13 +12,11 @@ Prints results to screen and saves to text file.
 A 'files' folder can be created in order to save files to.  
 (i.e. - Save as: files/filename)  
 
-Examples of file saving:    
+Examples of file saving:  
 
-Save as: files/jan.txt  
-Save as: files/feb.txt  
 Save as: files/march.txt  
-Save as: files/april.txt
-  
+Save as: files/april.txt  
+Save as: files/may.txt  
     
 <br>  
     
