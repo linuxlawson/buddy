@@ -24,6 +24,8 @@ Note: Use whole numbers only, wont do decimals at this time.
 
 Can be edited and adjusted accordingly.  
 
+buddy with graphical user interface [here](https://github.com/linuxlawson/budget-buddy)
+
   
   
   
