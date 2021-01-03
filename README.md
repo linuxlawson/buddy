@@ -27,6 +27,7 @@ Can be edited and adjusted accordingly.
 buddy with graphical user interface [here](https://github.com/linuxlawson/budget-buddy)
 
   
+  <br>
   
   
-
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg?style=flat-square" alt="made with python">
