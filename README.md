@@ -30,4 +30,4 @@ buddy with graphical user interface [here](https://github.com/linuxlawson/budget
   <br>
   
   
-<img src="https://img.shields.io/badge/made%20with-python-blue.svg?style=flat-square" alt="made with python">
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg?style=flat-square" alt="made with python"> ![CodeQL](https://github.com/linuxlawson/buddy/workflows/CodeQL/badge.svg)
