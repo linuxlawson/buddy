@@ -1,7 +1,7 @@
 # buddy  
 
 
-A command line interface (cli) budget program  
+CLI Budget Program  
 A money management tool.
 
 Calculates income and expenses on a monthly basis.  
