@@ -1,4 +1,4 @@
-# buddy  
+## buddy  
 
 
 CLI Budget Program  
