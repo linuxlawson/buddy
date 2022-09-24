@@ -1,20 +1,23 @@
 #!/usr/bin/python
-#Budget income/expenses program
-#Written by David Lawson - 2016
-#Python Version: 2.7
+#Budget Buddy
+#Income/Expenses Program
+#Written by David Lawson
+
 
 import os
 os.system('clear')
 import time
 import datetime
 x = datetime.datetime.now()
+import sys
 
 print
-print "##############################################"
-print "#  Program calculates income and expenses    #"
-print "#  on a monthly basis. Prints results        #"
-print "#  to screen w/option to save as text file.  #"
-print "##############################################"
+print "###########################################"
+print "#  Calculates income and expenses on      #"
+print "#  a monthly basis. Prints results to     #"
+print "#  screen w/option to save as text file.  #"
+print "#  Whole numbers only, wont do decimals.  #"
+print "###########################################"
 print
 time.sleep (0.5)
 
@@ -25,6 +28,10 @@ print
 class color:
    BOLD = '\033[1m'
    END = '\033[0m'
+   RED = '\033[91m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+
 print color.BOLD + "MONTHLY INCOME AND EXPENSES\n\n" + color.END
 time.sleep (0.5)
 
@@ -38,7 +45,7 @@ time.sleep (0.5)
 
 #gather info
 print
-time.sleep (1)
+time.sleep (0.5)
 print color.BOLD + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + color.END + "\n\n"
 time.sleep (1)
 
@@ -134,12 +141,12 @@ g = person
 h = other
 i = cell
 
-total = a + b + c + d + e + f + g + h + i
-print ('    Total Costs:    $'+str(total)) + "\n"
+total = (a + b + c + d + e + f + g + h + i)
+print color.BOLD + ('    Total Costs:    $'+str(total)) + "\n" + color.END
 time.sleep (1)
 
-remain = income - total
-print ('    Remaining:      $'+str(remain)) + "\n"
+remain = (income - total)
+print color.BOLD + ('    Remaining:      $'+str(remain)) + "\n" + color.END
 time.sleep (1)
 
 
@@ -149,8 +156,8 @@ sav = raw_input(" How much into savings account? $" )
 sav = int(sav)
 
 print
-left = remain - sav
-print ('    Whats Left:     $'+str(left))
+left = (remain - sav)
+print color.BOLD + ('    Whats Left:     $'+str(left)) + color.END
 time.sleep (1)
 
 print "\n"
@@ -158,8 +165,8 @@ earn = raw_input(" Additional earned income? $" )
 earn = int(earn)
 
 print
-newt = remain - sav + earn
-print ('    New Total:      $'+str(newt))
+newt = (remain - sav + earn)
+print color.BOLD + ('    New Total:      $'+str(newt)) + color.END
 
 
 #Save file as
