@@ -1,7 +1,8 @@
 #!/usr/bin/python
-#Budget income/expenses program
-#Written by David Lawson - 2016
-#Python Version: 2.7
+#Budget Buddy
+#Income/Expenses Program
+#Written by David Lawson
+
 
 import os
 os.system('clear')
@@ -140,11 +141,11 @@ g = person
 h = other
 i = cell
 
-total = a + b + c + d + e + f + g + h + i
+total = (a + b + c + d + e + f + g + h + i)
 print color.BOLD + ('    Total Costs:    $'+str(total)) + "\n" + color.END
 time.sleep (1)
 
-remain = income - total
+remain = (income - total)
 print color.BOLD + ('    Remaining:      $'+str(remain)) + "\n" + color.END
 time.sleep (1)
 
@@ -155,7 +156,7 @@ sav = raw_input(" How much into savings account? $" )
 sav = int(sav)
 
 print
-left = remain - sav
+left = (remain - sav)
 print color.BOLD + ('    Whats Left:     $'+str(left)) + color.END
 time.sleep (1)
 
@@ -164,7 +165,7 @@ earn = raw_input(" Additional earned income? $" )
 earn = int(earn)
 
 print
-newt = remain - sav + earn
+newt = (remain - sav + earn)
 print color.BOLD + ('    New Total:      $'+str(newt)) + color.END
 
 
