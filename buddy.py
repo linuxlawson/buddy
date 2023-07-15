@@ -10,19 +10,19 @@ import datetime
 x = datetime.datetime.now()
 
 os.system('clear')
-print ("")
+print ()
 print ("###########################################")
 print ("#  Calculates income and expenses on      #")
 print ("#  a monthly basis. Prints results to     #")
 print ("#  screen w/option to save as text file.  #")
 print ("#  Whole numbers only, wont do decimals.  #")
 print ("###########################################")
-print ("")
+print ()
 time.sleep (0.5)
 
 input("Press [Enter] to continue... ")
 os.system('clear')
-print
+print ()
 
 bold = '\033[1m'
 end = '\033[0m'
@@ -34,15 +34,15 @@ print (bold + "MONTHLY INCOME AND EXPENSES\n\n" + end)
 time.sleep (0.5)
 
 name = input("Name: " )
-print
+print ()
 time.sleep (0.5)
 
 month = input("Month: " )
-print
+print ()
 time.sleep (0.5)
 
 #gather info
-print
+print ()
 time.sleep (0.5)
 print (bold + "\n-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + end + "\n\n")
 time.sleep (1)
@@ -50,52 +50,52 @@ time.sleep (1)
 
 income = input("What is your monthly income? $" )
 income = int(income)
-print ("")
+print ()
 time.sleep (0.5)
 
 rent = input("How much is your rent? $" )
 rent = int(rent)
-print
+print ()
 time.sleep (0.5)
 
 cons = input("How much for consumers? $" )
 cons = int(cons)
-print
+print ()
 time.sleep (0.5)
 
 cable = input("How much for cable? (tv/internet): $" )
 cable = int(cable)
-print
+print ()
 time.sleep (0.5)
 
 car = input("How much for car insurance? $" )
 car = int(car)
-print
+print ()
 time.sleep (0.5)
 
 food = input("How much for food/groceries? $" )
 food = int(food)
-print
+print ()
 time.sleep (0.5)
 
 gas = input("How much for gas? $" )
 gas = int(gas)
-print
+print ()
 time.sleep (0.5)
 
 person = input("Personal items, clothes, etc: $" )
 person = int(person)
-print
+print ()
 time.sleep (0.5)
 
 other = input("Other expenses? $" )
 other = int(other)
-print
+print ()
 time.sleep (0.5)
 
 cell = input("Cell phone bill? $" )
 cell = int(cell)
-print ("\n")
+print ()
 time.sleep (1)
 
 
@@ -110,8 +110,8 @@ for char in string:
 
 #print to screen
 os.system('clear')
-print
-print (bold + " --YOUR INFO-- \n" + end)
+print ()
+print (bold + " --RESULTS-- \n" + end)
 time.sleep (1)
 
 print (name, " | ", month, (x.strftime("%Y")) + "\n") #year
@@ -149,20 +149,20 @@ time.sleep (1)
 
 
 #two more questions
-print ("\n")
+print ()
 sav = input(" How much into savings account? $" )
 sav = int(sav)
 
-print
+print ()
 left = (remain - sav)
 print (bold + ('    Whats Left:     $'+str(left)) + end)
 time.sleep (1)
 
-print ("\n")
+print ()
 earn = input(" Additional earned income? $" )
 earn = int(earn)
 
-print
+print ()
 newt = (remain - sav + earn)
 print (bold + ('    New Total:      $'+str(newt)) + end)
 
@@ -170,14 +170,14 @@ print (bold + ('    New Total:      $'+str(newt)) + end)
 #Save file as
 print ("\n")
 saveas = input('Save File as: ')
-print
+print ()
 
 #save to text file (w=writeOver, a=append)
 #save to: files/filename
 saveFile = open(saveas, 'w')
 
 #write to text file
-saveFile.write( str( ' --YOUR INFO--' ) + "\n\n" )
+saveFile.write( str( ' --RESULTS--' ) + "\n\n" )
 saveFile.write( str(name + ' | ' + str(month) + (x.strftime(" %Y")) + "\n\n" ))
 
 saveFile.write( 'Monthly Income:    $' + str(income) + "\n\n" )
@@ -201,4 +201,4 @@ saveFile.write( '    New Total:     $' + str(newt) + "\n\n" )
 
 saveFile.close()
 
-print ("\n")
+print ()
