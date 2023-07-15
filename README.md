@@ -28,4 +28,4 @@ buddy with graphical user interface (gui) [here](https://github.com/linuxlawson/
   
 <br>
   
-<img src="https://img.shields.io/badge/made%20with-python-blue.svg?style=flat-square" alt="made with python"> ![CodeQL](https://github.com/linuxlawson/buddy/workflows/CodeQL/badge.svg)
+<img src="https://img.shields.io/badge/made%20with-python-blue.svg?style=flat-square" alt="made with python">
