@@ -1,103 +1,101 @@
-#!/usr/bin/python
-#Budget Buddy
+#!/usr/bin/env python3
+#Budget Buddy (CLI Version)
 #Income/Expenses Program
-#Written by David Lawson
-
 
 import os
-os.system('clear')
+import sys
 import time
 import datetime
-x = datetime.datetime.now()
-import sys
 
-print
-print "###########################################"
-print "#  Calculates income and expenses on      #"
-print "#  a monthly basis. Prints results to     #"
-print "#  screen w/option to save as text file.  #"
-print "#  Whole numbers only, wont do decimals.  #"
-print "###########################################"
-print
+x = datetime.datetime.now()
+
+os.system('clear')
+print ("")
+print ("###########################################")
+print ("#  Calculates income and expenses on      #")
+print ("#  a monthly basis. Prints results to     #")
+print ("#  screen w/option to save as text file.  #")
+print ("#  Whole numbers only, wont do decimals.  #")
+print ("###########################################")
+print ("")
 time.sleep (0.5)
 
-raw_input("Press [Enter] to continue... ")
+input("Press [Enter] to continue... ")
 os.system('clear')
 print
 
-class color:
-   BOLD = '\033[1m'
-   END = '\033[0m'
-   RED = '\033[91m'
-   GREEN = '\033[92m'
-   YELLOW = '\033[93m'
+bold = '\033[1m'
+end = '\033[0m'
+red = '\033[91m'
+green = '\033[92m'
+yellow = '\033[93m'
 
-print color.BOLD + "MONTHLY INCOME AND EXPENSES\n\n" + color.END
+print (bold + "MONTHLY INCOME AND EXPENSES\n\n" + end)
 time.sleep (0.5)
 
-name = raw_input("Name: " )
+name = input("Name: " )
 print
 time.sleep (0.5)
 
-month = raw_input("Month: " )
+month = input("Month: " )
 print
 time.sleep (0.5)
 
 #gather info
 print
 time.sleep (0.5)
-print color.BOLD + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + color.END + "\n\n"
+print (bold + "\n-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + end + "\n\n")
 time.sleep (1)
 
 
-income = raw_input("What is your monthly income? $" )
+income = input("What is your monthly income? $" )
 income = int(income)
-print
+print ("")
 time.sleep (0.5)
 
-rent = raw_input("How much is your rent? $" )
+rent = input("How much is your rent? $" )
 rent = int(rent)
 print
 time.sleep (0.5)
 
-cons = raw_input("How much for consumers? $" )
+cons = input("How much for consumers? $" )
 cons = int(cons)
 print
 time.sleep (0.5)
 
-cable = raw_input("How much for cable? (tv/internet): $" )
+cable = input("How much for cable? (tv/internet): $" )
 cable = int(cable)
 print
 time.sleep (0.5)
 
-car = raw_input("How much for car insurance? $" )
+car = input("How much for car insurance? $" )
 car = int(car)
 print
 time.sleep (0.5)
 
-food = raw_input("How much for food/groceries? $" )
+food = input("How much for food/groceries? $" )
 food = int(food)
 print
 time.sleep (0.5)
 
-gas = raw_input("How much for gas? $" )
+gas = input("How much for gas? $" )
 gas = int(gas)
 print
 time.sleep (0.5)
 
-person = raw_input("Personal items, clothes, etc: $" )
+person = input("Personal items, clothes, etc: $" )
 person = int(person)
 print
 time.sleep (0.5)
 
-other = raw_input("Other expenses? $" )
+other = input("Other expenses? $" )
 other = int(other)
 print
 time.sleep (0.5)
 
-cell = raw_input("Cell phone bill? $" )
+cell = input("Cell phone bill? $" )
 cell = int(cell)
-print "\n"
+print ("\n")
 time.sleep (1)
 
 
@@ -107,19 +105,19 @@ string = 'Processing...\n'
 for char in string:
     sys.stdout.write(char)
     sys.stdout.flush()
-    time.sleep(.08)
+    time.sleep(.07)
 
 
 #print to screen
 os.system('clear')
 print
-print color.BOLD + " --YOUR INFO-- \n" + color.END
+print (bold + " --YOUR INFO-- \n" + end)
 time.sleep (1)
 
-print name, " | ", month, (x.strftime("%Y")) + "\n" #year
+print (name, " | ", month, (x.strftime("%Y")) + "\n") #year
 
-print ('Monthly Income:     $'+str(income)) + "\n"
-print ('  Monthly Costs      '+str()) + "\n"
+print ('Monthly Income:     $'+str(income) + "\n")
+print ('  Monthly Costs      '+str() + "\n")
 print ('  Rent:             $'+str(rent))
 print ('  Consumers:        $'+str(cons))
 print ('  Cable:            $'+str(cable))
@@ -128,7 +126,7 @@ print ('  Food:             $'+str(food))
 print ('  Gas:              $'+str(gas))
 print ('  Personal:         $'+str(person))
 print ('  Other:            $'+str(other))
-print ('  Phone:            $'+str(cell)) + "\n"
+print ('  Phone:            $'+str(cell) + "\n")
 time.sleep (1)
 
 a = rent
@@ -142,36 +140,36 @@ h = other
 i = cell
 
 total = (a + b + c + d + e + f + g + h + i)
-print color.BOLD + ('    Total Costs:    $'+str(total)) + "\n" + color.END
+print (bold + ('    Total Costs:    $'+str(total)) + "\n" + end)
 time.sleep (1)
 
 remain = (income - total)
-print color.BOLD + ('    Remaining:      $'+str(remain)) + "\n" + color.END
+print (bold + ('    Remaining:      $'+str(remain)) + "\n" + end)
 time.sleep (1)
 
 
 #two more questions
-print "\n"
-sav = raw_input(" How much into savings account? $" )
+print ("\n")
+sav = input(" How much into savings account? $" )
 sav = int(sav)
 
 print
 left = (remain - sav)
-print color.BOLD + ('    Whats Left:     $'+str(left)) + color.END
+print (bold + ('    Whats Left:     $'+str(left)) + end)
 time.sleep (1)
 
-print "\n"
-earn = raw_input(" Additional earned income? $" )
+print ("\n")
+earn = input(" Additional earned income? $" )
 earn = int(earn)
 
 print
 newt = (remain - sav + earn)
-print color.BOLD + ('    New Total:      $'+str(newt)) + color.END
+print (bold + ('    New Total:      $'+str(newt)) + end)
 
 
 #Save file as
-print "\n"
-saveas = raw_input('Save File as: ')
+print ("\n")
+saveas = input('Save File as: ')
 print
 
 #save to text file (w=writeOver, a=append)
@@ -203,4 +201,4 @@ saveFile.write( '    New Total:     $' + str(newt) + "\n\n" )
 
 saveFile.close()
 
-print "\n"
+print ("\n")
