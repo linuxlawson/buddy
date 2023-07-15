@@ -1,7 +1,7 @@
 ## buddy  
 
 
-Budget Program (CLI)  
+Monthly Budget Program (CLI)  
 A money management tool.
 
 Calculates income and expenses on a monthly basis.  
