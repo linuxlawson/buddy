@@ -30,7 +30,7 @@ red = '\033[91m'
 green = '\033[92m'
 yellow = '\033[93m'
 
-print (bold + "MONTHLY INCOME AND EXPENSES\n\n" + end)
+print (bold + "MONTHLY INCOME AND EXPENSES\n" + end)
 time.sleep (0.5)
 
 name = input("Name: " )
@@ -43,8 +43,7 @@ time.sleep (0.5)
 
 #gather info
 print ()
-time.sleep (0.5)
-print (bold + "\n-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + end + "\n\n")
+print (bold + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + end + "\n\n")
 time.sleep (1)
 
 
@@ -56,47 +55,38 @@ time.sleep (0.5)
 rent = input("How much is your rent? $" )
 rent = int(rent)
 print ()
-time.sleep (0.5)
 
 cons = input("How much for consumers? $" )
 cons = int(cons)
 print ()
-time.sleep (0.5)
 
 cable = input("How much for cable? (tv/internet): $" )
 cable = int(cable)
 print ()
-time.sleep (0.5)
 
 car = input("How much for car insurance? $" )
 car = int(car)
 print ()
-time.sleep (0.5)
 
 food = input("How much for food/groceries? $" )
 food = int(food)
 print ()
-time.sleep (0.5)
 
 gas = input("How much for gas? $" )
 gas = int(gas)
 print ()
-time.sleep (0.5)
 
 person = input("Personal items, clothes, etc: $" )
 person = int(person)
 print ()
-time.sleep (0.5)
 
 other = input("Other expenses? $" )
 other = int(other)
 print ()
-time.sleep (0.5)
 
 cell = input("Cell phone bill? $" )
 cell = int(cell)
 print ()
-time.sleep (1)
 
 
 #processing delay
@@ -117,7 +107,7 @@ time.sleep (1)
 print (name, " | ", month, (x.strftime("%Y")) + "\n") #year
 
 print ('Monthly Income:     $'+str(income) + "\n")
-print ('  Monthly Costs      '+str() + "\n")
+print ('  Expenses           '+str() + "\n")
 print ('  Rent:             $'+str(rent))
 print ('  Consumers:        $'+str(cons))
 print ('  Cable:            $'+str(cable))
@@ -141,11 +131,11 @@ i = cell
 
 total = (a + b + c + d + e + f + g + h + i)
 print (bold + ('    Total Costs:    $'+str(total)) + "\n" + end)
-time.sleep (1)
+time.sleep (0.5)
 
 remain = (income - total)
 print (bold + ('    Remaining:      $'+str(remain)) + "\n" + end)
-time.sleep (1)
+time.sleep (0.5)
 
 
 #two more questions
@@ -156,9 +146,9 @@ sav = int(sav)
 print ()
 left = (remain - sav)
 print (bold + ('    Whats Left:     $'+str(left)) + end)
-time.sleep (1)
+time.sleep (0.5)
 
-print ()
+print ("\n")
 earn = input(" Additional earned income? $" )
 earn = int(earn)
 
@@ -181,7 +171,7 @@ saveFile.write( str( ' --RESULTS--' ) + "\n\n" )
 saveFile.write( str(name + ' | ' + str(month) + (x.strftime(" %Y")) + "\n\n" ))
 
 saveFile.write( 'Monthly Income:    $' + str(income) + "\n\n" )
-saveFile.write( '  Monthly Costs     ' + str() + "\n\n" )
+saveFile.write( '  Expenses          ' + str() + "\n\n" )
 saveFile.write( '  Rent:            $' + str(rent) + "\n" )
 saveFile.write( '  Consumers:       $' + str(cons) + "\n" )
 saveFile.write( '  Cable:           $' + str(cable) + "\n" )
@@ -198,7 +188,6 @@ saveFile.write( ' How much into savings account? $' + str(sav) + "\n\n" )
 saveFile.write( '    Whats Left:    $' + str(left) + "\n\n\n" )
 saveFile.write( ' Additional earned income? $' + str(earn) + "\n\n" )
 saveFile.write( '    New Total:     $' + str(newt) + "\n\n" )
-
 saveFile.close()
 
 print ()
