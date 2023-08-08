@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#Budget Buddy (CLI Version)
+#Buddy (CLI Version)
 #Income/Expenses Program
 
 import os
@@ -30,7 +30,7 @@ red = '\033[91m'
 green = '\033[92m'
 yellow = '\033[93m'
 
-print (bold + "MONTHLY INCOME AND EXPENSES\n" + end)
+print (f"{bold}MONTHLY INCOME AND EXPENSES\n{end}")
 time.sleep (0.5)
 
 name = input("Name: " )
@@ -43,7 +43,7 @@ time.sleep (0.5)
 
 #gather info
 print ()
-print (bold + "-ANSWERS MUST BE IN DOLLAR AMOUNTS-" + end + "\n\n")
+print (f"{bold}-ANSWERS MUST BE IN DOLLAR AMOUNTS-\n\n{end}")
 time.sleep (1)
 
 
@@ -101,10 +101,10 @@ for char in string:
 #print to screen
 os.system('clear')
 print ()
-print (bold + " --RESULTS-- \n" + end)
+print (f"{bold} --RESULTS-- \n{end}")
 time.sleep (1)
 
-print (name, " | ", month, (x.strftime("%Y")) + "\n") #year
+print (name, " | ", month, (x.strftime("%Y")) + "\n") 
 
 print ('Monthly Income:     $'+str(income) + "\n")
 print ('  Expenses           '+str() + "\n")
@@ -130,11 +130,11 @@ h = other
 i = cell
 
 total = (a + b + c + d + e + f + g + h + i)
-print (bold + ('    Total Costs:    $'+str(total)) + "\n" + end)
+print (f"{bold}    Total Costs:    ${total}\n{end}")
 time.sleep (0.5)
 
 remain = (income - total)
-print (bold + ('    Remaining:      $'+str(remain)) + "\n" + end)
+print (f"{bold}    Remaining:      ${remain}\n{end}")
 time.sleep (0.5)
 
 
@@ -145,7 +145,7 @@ sav = int(sav)
 
 print ()
 left = (remain - sav)
-print (bold + ('    Whats Left:     $'+str(left)) + end)
+print (f"{bold}    Whats Left:     ${left}{end}")
 time.sleep (0.5)
 
 print ("\n")
@@ -154,7 +154,7 @@ earn = int(earn)
 
 print ()
 newt = (remain - sav + earn)
-print (bold + ('    New Total:      $'+str(newt)) + end)
+print (f"{bold}    New Total:      ${newt}{end}")
 
 
 #Save file as
