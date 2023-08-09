@@ -6,7 +6,7 @@ A money management tool.
 
 Calculates income and expenses on a monthly basis.  
 **Monthly Income - Expenses = Remainder**  
-Prints results to screen and saves results to a text file.  
+Prints results to screen with option to save to a text file.  
 
 A files `folder` can be created in order to save files to.  
 (i.e. - Save as: files/filename)  
