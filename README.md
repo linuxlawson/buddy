@@ -5,7 +5,7 @@ Monthly Budget Program (CLI)
 A money management tool.
 
 Calculates income and expenses on a monthly basis.  
-**Monthly Income - Expenses = Total**  
+**Monthly Income - Expenses = Remainder**  
 Prints results to screen and saves results to a text file.  
 
 A files `folder` can be created in order to save files to.  
